@@ -1,9 +1,8 @@
 import nltk
-from nltk.stem import WordNetLemmatizer
-from nltk.corpus import stopwords
-from utils import expand_contractions, get_wordnet_pos
 from nltk.corpus import wordnet
-import time
+from nltk.corpus import stopwords
+from nltk.stem import WordNetLemmatizer
+from utils import expand_contractions, get_wordnet_pos
 import json
 
 
@@ -57,6 +56,7 @@ def get_word_score(roots):
     return word_scores
 
 
+# calculate percentile
 def calculate_percentile(rank):
     percentile  = rank * 100 / len(dictionary)
     return round(percentile, 2)
