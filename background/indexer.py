@@ -20,7 +20,6 @@ for word in dict_words:
 
 # sort dict to creat new ranks based on current dict size
 dictionary = dict(sorted(unsorted_dictionary.items(), key=lambda x: x[1]))
-
 wordRank = 1
 for word in dictionary:
     dictionary[word] = wordRank
