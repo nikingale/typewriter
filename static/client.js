@@ -50,12 +50,14 @@ function updateScore(response) {
 
 function updateList(htmlList, data) {
     htmlList.innerHTML = '';
+
     for (i = 0; i < data.length; i++) {
         item = document.createElement('li');
         item.setAttribute("class", "list-group-item");
         item.innerHTML = data[i];
         htmlList.appendChild(item);
     }
+
     if (data.length > 10) {
         htmlList.style.maxHeight = "400px";
         htmlList.style.overflowY = "auto";
@@ -66,6 +68,7 @@ function getTokens() {
     var input = document.getElementById("inputText").value
     var word_count = 0;
     var sentence_count = 0;
+
     for (i = 0; i < input.length; i++) {
         if (input[i] == ' ') {
             word_count += 1;
@@ -74,6 +77,7 @@ function getTokens() {
             sentence_count += 1;
         }
     }
+
     document.getElementById("wordCount").textContent = word_count + 1;
     document.getElementById("sentenceCount").textContent = sentence_count;
 }

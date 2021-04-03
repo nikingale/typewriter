@@ -1,5 +1,5 @@
-from flask import Flask, render_template
-from flask import request
+from flask import Flask
+from flask import request, render_template
 from processor import process
 
 app = Flask(__name__)
@@ -7,6 +7,7 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     return render_template('index.html')
+
 
 @app.route('/score', methods=['GET', 'POST'])
 def score():
@@ -36,7 +37,7 @@ def buildResponse(scores):
     if len(scores) == 0:
         score = 0
     else: 
-        score = round( (len(medium) + len(hard)) / len(scores) * 100 , 2)
+        score = round((len(medium) + len(hard)) / len(scores) * 100 , 2)
 
     response = dict()
     response["score"] = score

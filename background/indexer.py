@@ -27,7 +27,6 @@ for word in dictionary:
     wordRank += 1
 
 dictionary_size = len(dictionary)
-print('dictionary size', len(dictionary))
 
 with open('word_rank.json', 'w') as fp:
     json.dump(dictionary, fp)
