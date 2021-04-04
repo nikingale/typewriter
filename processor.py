@@ -5,7 +5,6 @@ from nltk.stem import WordNetLemmatizer
 from utils import expand_contractions, get_wordnet_pos
 import json
 
-nltk.download('punkt')
 
 with open('word_rank.json') as json_file:
     dictionary = json.load(json_file)
@@ -59,7 +58,7 @@ def get_word_score(roots):
 
 # calculate percentile
 def calculate_percentile(rank):
-    percentile  = rank * 100 / len(dictionary)
+    percentile = rank * 100 / len(dictionary)
     return round(percentile, 2)
 
 
