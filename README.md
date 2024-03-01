@@ -1,5 +1,5 @@
 # Typewriter
-### A web application for analyzing the overall difficulty of a given text
+### A web application for analyzing the overall difficulty of provided text
 ---
 ### Tech Stack Involved
 ###### Backend - Python, NLTK, Flask
